@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		body{
+			background: #000;
+		}
+		.loading{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left:-100px ;
+			margin-top: -100px;
+		}
+		.loading ul{
+			width: 200px;
+			height: 200px;
+			box-sizing:border-box;
+			border:1px solid orange;
+			border-radius: 50%;
+		}
+		.loading .ring1,.ring2{
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-sizing:border-box;
+			width: 200px;
+			height: 200px;
+			border:1px solid orange;
+			border-radius: 50%;
+			-webkit-transform:scale(1);
+
+			
+		}
+		.loading .ring1{
+			-webkit-animation:move .8s ease-in infinite;
+		}
+		.loading .ring2{
+			-webkit-animation:move .8s ease-in .33s infinite;
+		}
+		.loading .bling{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 194px;
+			height: 194px;
+			border: 3px solid orange;
+			border-left-color: transparent;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			border-radius: 50%;
+			-webkit-animation:run .3s ease-in infinite;
+		}
+		.loading .txt{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 200px;
+			font-family: Arial;
+			font-size: 30px;
+			color: #fff;
+			text-align: center;
+			line-height: 200px;
+		}
+		@keyframes move{
+			0%{-webkit-transform:scale(1);opacity: 1;}
+			100%{-webkit-transform:scale(1.5);opacity: 0;}
+		}
+		@keyframes run{
+			0%{-webkit-transform:rotate(0deg);}
+			100%{-webkit-transform:rotate(360deg);}
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<ul>
+			<li class="ring1"></li>
+			<li class="ring2"></li>
+			<li class="bling"></li>
+			<li class="txt">Loading</li>
+		</ul>
+	</div>
+</body>
+</html>
